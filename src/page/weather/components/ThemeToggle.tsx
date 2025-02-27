@@ -13,9 +13,9 @@ const ThemeToggle = () => {
     <ThemeToggleContainer>
       <ThemeToggleButton onClick={() => dispatch(setTheme(!theme))}>
         {theme ? (
-          <Brightness7Icon fontSize="large" color="primary" />
+          <DarkModeIcon fontSize="large" color="primary" />
         ) : (
-          <DarkModeIcon fontSize="large" sx={{ color: 'white' }} />
+          <Brightness7Icon fontSize="large" sx={{ color: 'white' }} />
         )}
       </ThemeToggleButton>
     </ThemeToggleContainer>
