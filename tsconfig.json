@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "api": [
+        "api"
+      ],
+      "constants": [
+        "constants"
+      ],
+      "components": [
+        "components"
+      ],
+      "pages": [
+        "pages"
+      ],
+      "router": [
+        "router"
+      ],
+      "services": [
+        "services"
+      ],
+      "utils": [
+        "utils"
+      ],
+      "types": [
+        "types"
+      ],
+      "layouts": [
+        "layouts"
+      ],
+      "assets": [
+        "assets"
+      ]
+    },
+    "types": [
+      "vite/client"
+    ],
+    "useUnknownInCatchVariables": false
+  },
+  "include": [
+    "src",
+    "tailwind.config"
+  ]
+}

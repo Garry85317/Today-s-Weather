@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './custom-swal.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+
+  a {
+    text-decoration: none;
+  }
+}

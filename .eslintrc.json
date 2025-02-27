@@ -1,0 +1,143 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  /**
+   * 設置的優先度取決於順序，若設置上有衝突時，越下方的設定優先度會越高
+   * (後方的設置會覆蓋前方的設定）
+   */
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "prettier",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": [
+          "tsconfig.json"
+        ]
+      },
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".json",
+          ".d.ts",
+          ".css"
+        ],
+        "project": [
+          "tsconfig.json"
+        ]
+      }
+    }
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "simple-import-sort",
+    "unused-imports",
+    "@typescript-eslint",
+    "@tanstack/query"
+  ],
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-one-expression-per-line": 0,
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "semi-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          [
+            "^react",
+            "^@?\\w"
+          ],
+          [
+            "^folder1(/.*|$)",
+            "^folder2(/.*|$)",
+            "^folder3(/.*|$)",
+            "^\\."
+          ],
+          [
+            "^[^.]"
+          ]
+        ]
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-unused-vars": "warn",
+    "max-len": [
+      "warn",
+      {
+        "code": 180
+      }
+    ],
+    "react-hooks/exhaustive-deps": "warn",
+    "react/display-name": "warn"
+  }
+}
